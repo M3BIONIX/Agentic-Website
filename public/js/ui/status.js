@@ -55,3 +55,4 @@ export function updateLastEvent(eventName) {
   lastEventEl.textContent = `Last event: ${eventName} at ${new Date().toLocaleTimeString()}`;
 }
 
+

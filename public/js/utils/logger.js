@@ -24,3 +24,4 @@ export function log(message, type = 'info') {
   appendEventLog(message);
 }
 
+
