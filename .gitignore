@@ -1,6 +1,6 @@
 node_modules
 build
 config
-.well-known
+./well-known
 .next
 package-lock.json

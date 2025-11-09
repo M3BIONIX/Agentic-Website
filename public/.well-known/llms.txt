@@ -1,0 +1,43 @@
+{
+  "version": "2.0",
+  "description": "Each route exposes a static manifest URL describing the tools available to agents.",
+  "routes": [
+    {
+      "pageId": "navigation",
+      "title": "Global Navigation",
+      "description": "Tools that allow agents to switch between pages.",
+      "manifestUrl": "/manifests/navigation.json"
+    },
+    {
+      "pageId": "home",
+      "title": "Commerce Hub",
+      "description": "Storefront overview with featured catalog and quick actions.",
+      "manifestUrl": "/manifests/home.json"
+    },
+    {
+      "pageId": "consultations",
+      "title": "Consultation Booking",
+      "description": "Schedule strategic sessions and browse FAQs.",
+      "manifestUrl": "/manifests/consultations.json"
+    },
+    {
+      "pageId": "analytics",
+      "title": "Agent Analytics Dashboard",
+      "description": "Performance metrics, session timelines, exports.",
+      "manifestUrl": "/manifests/analytics.json"
+    },
+    {
+      "pageId": "docs",
+      "title": "Knowledge Base & Playbooks",
+      "description": "Structured documentation and training requests.",
+      "manifestUrl": "/manifests/docs.json"
+    },
+    {
+      "pageId": "support",
+      "title": "Support Triage Workspace",
+      "description": "Ticket responses, templates, resolution checklist.",
+      "manifestUrl": "/manifests/support.json"
+    }
+  ]
+}
+
