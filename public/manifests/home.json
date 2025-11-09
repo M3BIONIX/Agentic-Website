@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "pageId": "home",
+  "title": "Commerce Hub",
+  "description": "Primary storefront overview with featured products and quick actions.",
+  "routes": ["consultations", "analytics", "docs", "support"],
+  "tools": [
+    {
+      "name": "featured_product_highlight",
+      "eventName": "featured_product_highlight",
+      "description": "Focus or scroll to a featured product card by product identifier.",
+      "parameters": {
+        "productId": {
+          "type": "string",
+          "description": "Unique id or slug of the product card to highlight.",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "quick_contact_fill_submit",
+      "eventName": "quick_contact_fill_submit",
+      "description": "Fill the quick contact form and submit in a single call.",
+      "parameters": {
+        "name": {
+          "type": "string",
+          "description": "Full name for the contact request.",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the requester.",
+          "required": true
+        },
+        "message": {
+          "type": "string",
+          "description": "Optional context message.",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "quick_contact_fill",
+      "eventName": "quick_contact_fill",
+      "description": "Populate the quick contact form without submitting it.",
+      "parameters": {
+        "name": {
+          "type": "string",
+          "description": "Full name for the contact request.",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the requester.",
+          "required": true
+        },
+        "message": {
+          "type": "string",
+          "description": "Optional context message.",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "quick_contact_fill",
+      "eventName": "quick_contact_fill",
+      "description": "Populate the quick contact form without submitting it.",
+      "parameters": {
+        "name": {
+          "type": "string",
+          "description": "Full name for the contact request.",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the requester.",
+          "required": true
+        },
+        "message": {
+          "type": "string",
+          "description": "Optional context message.",
+          "required": false
+        }
+      }
+    }
+  ]
+}
+

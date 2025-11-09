@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "pageId": "consultations",
+  "title": "Consultation Booking",
+  "description": "Schedule strategic sessions, read FAQs, and submit consultation requests.",
+  "routes": ["analytics", "docs", "support"],
+  "tools": [
+    {
+      "name": "consultation_form_fill",
+      "eventName": "consultation_form_fill",
+      "description": "Populate the consultation booking form fields.",
+      "parameters": {
+        "name": {
+          "type": "string",
+          "description": "Contact full name.",
+          "required": true
+        },
+        "company": {
+          "type": "string",
+          "description": "Organization or team name.",
+          "required": false
+        },
+        "objective": {
+          "type": "string",
+          "description": "Summary of the session objectives.",
+          "required": true
+        },
+        "preferredDate": {
+          "type": "string",
+          "description": "ISO date (YYYY-MM-DD) representing preferred meeting day.",
+          "required": true
+        },
+        "preferredTime": {
+          "type": "string",
+          "description": "Preferred start time (24h format, e.g. 14:30).",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "consultation_form_submit",
+      "eventName": "consultation_form_submit",
+      "description": "Submit the consultation request after validation.",
+      "parameters": {}
+    },
+    {
+      "name": "faq_reveal",
+      "eventName": "faq_reveal",
+      "description": "Open a specific FAQ accordion item.",
+      "parameters": {
+        "faqId": {
+          "type": "string",
+          "description": "Identifier of the FAQ entry to expand.",
+          "required": true
+        }
+      }
+    }
+  ]
+}
+

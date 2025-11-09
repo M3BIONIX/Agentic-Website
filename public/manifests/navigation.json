@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "pageId": "navigation",
+  "title": "Global Navigation",
+  "description": "Tools that allow agents to move between pages.",
+  "routes": ["home", "consultations", "analytics", "docs", "support"],
+  "tools": [
+    {
+      "name": "navigate_to_route",
+      "eventName": "navigate_to_route",
+      "description": "Navigate to a supported page by route identifier or explicit path.",
+      "parameters": {
+        "pageId": {
+          "type": "string",
+          "description": "Page identifier (home, consultations, analytics, docs, support).",
+          "required": false
+        },
+        "path": {
+          "type": "string",
+          "description": "Absolute or relative path (e.g., /docs or docs). Overrides pageId when provided.",
+          "required": false
+        }
+      }
+    }
+  ]
+}
+

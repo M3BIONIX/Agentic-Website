@@ -1,0 +1,56 @@
+{
+  "version": "1.0",
+  "pageId": "analytics",
+  "title": "Agent Analytics Dashboard",
+  "description": "Review agent performance, KPI summaries, and session timelines.",
+  "routes": ["consultations", "docs", "support"],
+  "tools": [
+    {
+      "name": "dashboard_filter_apply",
+      "eventName": "dashboard_filter_apply",
+      "description": "Apply analytics filters to refresh KPI and chart data.",
+      "parameters": {
+        "range": {
+          "type": "string",
+          "description": "Time range keyword (e.g. 7d, 30d, quarter).",
+          "required": false
+        },
+        "agentType": {
+          "type": "string",
+          "description": "Filter by agent persona or channel.",
+          "required": false
+        },
+        "successOnly": {
+          "type": "boolean",
+          "description": "Limit results to successful sessions.",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "session_detail_focus",
+      "eventName": "session_detail_focus",
+      "description": "Focus a specific agent session in the recent activity table.",
+      "parameters": {
+        "sessionId": {
+          "type": "string",
+          "description": "Identifier of the session to reveal.",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "export_insights",
+      "eventName": "export_insights",
+      "description": "Trigger export of analytics insights as CSV or JSON.",
+      "parameters": {
+        "format": {
+          "type": "string",
+          "description": "Export format (csv or json).",
+          "required": false
+        }
+      }
+    }
+  ]
+}
+

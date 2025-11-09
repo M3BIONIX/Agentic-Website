@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "pageId": "docs",
+  "title": "Knowledge Base & Playbooks",
+  "description": "Structured documentation with playbooks, glossary, and training requests.",
+  "routes": ["consultations", "analytics", "support"],
+  "tools": [
+    {
+      "name": "doc_section_focus",
+      "eventName": "doc_section_focus",
+      "description": "Scroll to and highlight a documentation section.",
+      "parameters": {
+        "sectionId": {
+          "type": "string",
+          "description": "Section slug to focus.",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "playbook_expand",
+      "eventName": "playbook_expand",
+      "description": "Expand a playbook accordion entry for deeper instructions.",
+      "parameters": {
+        "playbookId": {
+          "type": "string",
+          "description": "Identifier of the playbook card.",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "training_request_fill",
+      "eventName": "training_request_fill",
+      "description": "Fill and optionally submit the training follow-up form.",
+      "parameters": {
+        "name": {
+          "type": "string",
+          "description": "Requester full name.",
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "description": "Requester email address.",
+          "required": true
+        },
+        "focusArea": {
+          "type": "string",
+          "description": "Topic or area of the requested training.",
+          "required": true
+        },
+        "submit": {
+          "type": "boolean",
+          "description": "Submit the form after filling when true.",
+          "required": false
+        }
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "pageId": "support",
+  "title": "Support Triage Workspace",
+  "description": "Manage tickets, compose responses, and track resolution checklists.",
+  "routes": ["consultations", "analytics", "docs"],
+  "tools": [
+    {
+      "name": "ticket_select",
+      "eventName": "ticket_select",
+      "description": "Load a ticket thread into focus.",
+      "parameters": {
+        "ticketId": {
+          "type": "string",
+          "description": "Ticket identifier from the inbox list.",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "response_compose_send",
+      "eventName": "response_compose_send",
+      "description": "Compose a response using an optional template and send it.",
+      "parameters": {
+        "ticketId": {
+          "type": "string",
+          "description": "Target ticket identifier (must match selected ticket).",
+          "required": true
+        },
+        "templateId": {
+          "type": "string",
+          "description": "Optional canned response template identifier.",
+          "required": false
+        },
+        "message": {
+          "type": "string",
+          "description": "Body content of the response.",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "resolution_checklist_update",
+      "eventName": "resolution_checklist_update",
+      "description": "Toggle resolution checklist items to track progress.",
+      "parameters": {
+        "itemId": {
+          "type": "string",
+          "description": "Checklist item identifier.",
+          "required": true
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "True marks the checklist item complete.",
+          "required": true
+        }
+      }
+    }
+  ]
+}
+
